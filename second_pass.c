@@ -1,2 +1,2 @@
 #include <stdio.h>
-printf("hi dddd");
+printf("hi ");
