@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html">
+<h:head>
+    <title>לוח בקרה למנהל</title>
+    <style>
+        body { font-family: Arial, sans-serif; direction: rtl; text-align: center; background-color: #f4f4f4; }
+        .container { margin-top: 80px; padding: 30px; background: white; display: inline-block; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    </style>
+</h:head>
+<h:body>
+    <div class="container">
+        <h1>ברוך הבא, מנהל המערכת!</h1>
+        <p>כאן תוכל לנהל את מלאי הסרטים והשאלות המשתמשים.</p>
+        <h:form>
+            <h:commandButton value="התנתקות" action="#{loginBean.logout}" />
+        </h:form>
+    </div>
+</h:body>
+</html>

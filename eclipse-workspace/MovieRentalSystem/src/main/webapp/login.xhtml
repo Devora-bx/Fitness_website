@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+<h:head>
+    <title>כניסה למערכת השאלת סרטים</title>
+    <style>
+        body { font-family: Arial, sans-serif; direction: rtl; text-align: center; background-color: #f4f4f4; }
+        .login-container { margin-top: 100px; padding: 20px; background: white; display: inline-block; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    </style>
+</h:head>
+<h:body>
+    <div class="login-container">
+        <h2>התחברות למערכת</h2>
+        <h:form id="loginForm">
+            <h:messages style="color:red" showDetail="true" />
+            שם משתמש: <h:inputText value="#{loginBean.username}" required="true" requiredMessage="יש להזין שם משתמש" /><br/><br/>
+            סיסמה: <h:inputSecret value="#{loginBean.password}" required="true" requiredMessage="יש להזין סיסמה" /><br/><br/>
+            <h:commandButton value="התחבר" action="#{loginBean.login}" />
+        </h:form>
+    </div>
+</h:body>
+</html>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+<h:head>
+    <title>קטלוג הסרטים</title>
+    <style>
+        body { font-family: Arial, sans-serif; direction: rtl; text-align: center; background-color: #f9f9f9; }
+        .catalog-container { margin-top: 50px; padding: 20px; background: white; width: 80%; margin-left: auto; margin-right: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .header { background-color: #007bff; color: white; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+        .movies-grid { display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px; }
+        .movie-card { border: 1px solid #ddd; padding: 15px; border-radius: 8px; width: 250px; background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .movie-title { font-size: 1.2em; font-weight: bold; margin-bottom: 10px; color: #333; }
+        .movie-desc { font-size: 0.9em; color: #666; margin-bottom: 15px; }
+        .btn { padding: 8px 15px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px; display: inline-block; border: none; cursor: pointer;}
+        .logout-btn { background-color: #dc3545; color: white; padding: 8px 15px; text-decoration: none; border-radius: 5px; float: left; margin-top: -45px; margin-left: 20px;}
+    </style>
+</h:head>
+<h:body>
+    <div class="catalog-container">
+        <div class="header">
+            <h2>ברוך הבא למערכת השאלת הסרטים!</h2>
+            <h:form>
+                <h:commandLink value="התנתק" action="#{loginBean.logout}" styleClass="logout-btn"/>
+            </h:form>
+        </div>
+        
+        <h3>סרטים זמינים להשאלה</h3>
+        <p>כאן יוצג קטלוג הסרטים בעתיד.</p>
+        
+        <div class="movies-grid">
+            <div class="movie-card">
+                <div class="movie-title">הסנדק</div>
+                <div class="movie-desc">סרט פשע קלאסי על משפחת המאפיה קורליאונה.</div>
+                <button class="btn">השאל סרט</button>
+            </div>
+            
+            <div class="movie-card">
+                <div class="movie-title">חומות של תקווה</div>
+                <div class="movie-desc">סיפור מרגש על תקווה וחברות בתוך כלא שמור.</div>
+                <button class="btn">השאל סרט</button>
+            </div>
+            
+            <div class="movie-card">
+                <div class="movie-title">מטריקס</div>
+                <div class="movie-desc">מותחן מדע בדיוני שבודק את גבולות המציאות.</div>
+                <button class="btn">השאל סרט</button>
+            </div>
+        </div>
+    </div>
+</h:body>
+</html>
